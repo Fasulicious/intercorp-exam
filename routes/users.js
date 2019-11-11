@@ -1,6 +1,7 @@
 'use strict'
 
 import Router from 'koa-router'
+import moment from 'moment'
 import {
   createUser,
   getUser,
@@ -102,6 +103,7 @@ router.get('/', async (ctx) => {
   users.forEach(user => {
     delete user.id
     delete user.created_at
+    user.birthday = moment(user.birthday).format('DD-MM-YYYY')
     user.death_date = Math.max(user.age, parseInt(Math.random() * LIFE_EXPECTATION, 10))
   })
   ctx.body = users
