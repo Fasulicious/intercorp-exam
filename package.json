@@ -1,7 +1,7 @@
 {
   "name": "intercorp",
   "version": "1.0.0",
-  "description": "This is an demo api for intercorp retail",
+  "description": "This is a demo api for intercorp retail",
   "main": "app.js",
   "scripts": {
     "start": "node -r esm app.js",
@@ -35,8 +35,5 @@
     "ignore": [
       "docs/"
     ]
-  },
-  "apidoc": {
-    "title": "Intercorp Retail Exam"
   }
 }
